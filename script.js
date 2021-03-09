@@ -69,20 +69,46 @@ function sumarCarrito() {
   `;
 }
 
-/* $(document).ready(function () {
+$(document).ready(function () {
   $("#sobreNosotros").fadeIn(1500)(function () {
   });
-}); */
+});
 
 
+$("#iniciarCompra").click(function () {
+  for (var i = 0; i < carrito.length; i++) {
+    console.log("Carrito Status: ", i);
 
-
-//https://api.mercadolibre.com/sites/MLA/search?category=MLA5726
-/* $.get(
-  "https://codestats.net/api/users/jwildemer",
-  function (baseDeDatos, estado) {
-    console.log(estado)
-    console.log(baseDeDatos);
-    //baseDedatos = valores;
+    $.post('https://api.mercadopago.com/checkout/preferences'),
+    {
+      "items": [
+        {
+          "title": carrito[i].titulo,
+          "description": carrito[i].descripcion,
+          "quantity": 1,
+          "currency_id": "ARS",
+          "unit_price": carrito[i].precio
+        }
+      ]
+    }
   }
-); */
+});
+
+
+$.post('https://api.mercadopago.com/v1/payments'),
+{
+  "token": "TEST-37e89871-b0c1-415f-81df-36e077473b02",
+  "payment_method_id": "visa",
+  "additional_info": {
+    "items": [
+      {
+        "id": "PR0001",
+        "title": "Point Mini",
+        "description": "Producto Point para cobros con tarjetas mediante bluetooth",
+        "currency_id": "ARS",
+        "quantity": 1,
+        "unit_price": 58.80
+      }
+    ],
+  }
+}
