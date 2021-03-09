@@ -11,13 +11,11 @@ body{
 }
 
 header{
-  background: #CD7BAC;
-  background-image: linear-gradient(to right, #c93d91, #ca95b5);
+  background: #df9aaf;
   padding-top: 5px;
   width: 100%;
   position: fixed;
   top: 0%;
-  border-bottom: groove;
   display: grid;
   grid-template-columns: auto;
   z-index: 1000;
@@ -78,10 +76,42 @@ nav a:hover{
   cursor: pointer;
 }
 
-p, h1, h2, h3, h4 {
-color: rgb(0, 0, 0);
+p, h2, h4, h5 {
+color: black;
 }
 
+/*Inicio*/
+#inicio {
+  padding-bottom: 60px;  
+/*   position: relative; */
+/*   display: inline-block; */
+}
+h1{
+/*   position: absolute; al div que contenga el h1 y h3 */
+  text-align: center;
+}
+h3{
+/*   position: absolute; */
+  text-align: center;
+}
+
+/*Sobre Nosotros*/
+#sobreNosotros{
+/*   display: flex; */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/*Nuestros Productos*/
+#productos{
+/*   display: flex; */
+  text-align: left;
+
+}
+
+
+/*shop*/
 .card {
 margin: 10px auto;
 padding: 20px;
@@ -90,29 +120,21 @@ border: 1px solid #b102b1;
 justify-content: center;
 }
 
-.container {
+.cardConteiner {
 height: 10rem;
 display: flex;
-/* align-items: start; */
-}
-
-.center-h {
 justify-content: center;
-}
-
-.center-v {
 align-items: center;
 }
 
+/*Footer*/
 #footer .footer-top {
   background: #CD7BAC;
   padding: 60px 0 30px 0;
 }
-
 #footer .footer-top .footer-info {
   margin-bottom: 30px;
 }
-
 #footer .footer-top .footer-info h3 {
   font-size: 34px;
   font-family: 'Josefin Sans', sans-serif;
@@ -124,14 +146,12 @@ align-items: center;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-
 #footer .footer-top .footer-info p {
   font-size: 13px;
   line-height: 24px;
   margin-bottom: 0;
   color: #ecf5ff;
 }
-
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
@@ -146,12 +166,10 @@ align-items: center;
   height: 36px;
   transition: 0.3s;
 }
-
 #footer .footer-top .social-links a:hover {
   background: #CD7BAC;
   color: #fff;
 }
-
 #footer .footer-top h4 {
   font-size: 14px;
   font-family: 'Josefin Sans', sans-serif;
@@ -161,17 +179,20 @@ align-items: center;
   position: relative;
   padding-bottom: 10px;
 }
-
-
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
 }
-
 #footer .footer-top .footer-contact p {
   line-height: 26px;
 }
-
 #footer .copyright {
   text-align: center;
-  padding-top: 30px;
+  padding-top: 10px;
 }
+
+/*Nueva paleta
+celeste {color: #2bc8b3;}
+aguamarina {color: #89dda4;}
+magenta {color: #7a1a78;}
+rosa oscuro {color: #c32987;}
+rosa pastel {color: #df9aaf;}*

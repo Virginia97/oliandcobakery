@@ -38,6 +38,7 @@ function agregarAlCarrito(id) {
   carrito.push(baseDeDatos[id]);
 }
 
+
 function verCarrito() {
   document.getElementById("Catalogo").innerHTML = ``;
 
@@ -68,16 +69,24 @@ function sumarCarrito() {
   `;
 }
 
+$(document).ready(function(){
+  $("#sobreNosotros").fadeIn(1500)(function(){ 
+  });
+});
 
-function finalizarCompra(e) {
-    if (e.which == 13 || e.keyCode == 13) { 
- alert("¿Deseas finalizar la compra?");        
-     }
 
-document.getElementById("Finalizar compra").innerHTML +=`
-  <div class="button">
-    <button "finalizarCompra()"></button> 
-    </div>
-  `;
-  console.log("Finalizar compra")
-}
+$(document).ready(function(){
+  $("#iniciarCompra").click(function(){
+    //alert("¿Deseas finalizar la compra?") funcion para iniciar compra con MP
+  }); 
+  });
+
+//https://api.mercadolibre.com/sites/MLA/search?category=MLA5726
+$.get(
+  "https://codestats.net/api/users/jwildemer",
+ function (baseDeDatos, estado) {
+    console.log(estado)
+    console.log(baseDeDatos);
+    //baseDedatos = valores;
+  }
+);
