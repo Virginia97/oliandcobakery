@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="en" style="background-color: rgb(107, 11, 145)">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oli & Co Bakery</title>
-  <link rel="stylesheet" type="text/css" href="CSS/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Nunito&display=swap"rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oli & Co Bakery</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Nunito&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<header class="conteiner-fluid">
-  <div class="row-top">
-  <div class="col-md-12"> 
-  <img src="CSS/images/logomuffin.png" alt="" class="logo"></a></div>
-  <div>
-      <nav class="main-nav float-right d-none d-lg-block">
-  <ul>
-    <li class="active"><a href="index.html">Inicio</a></li>
-    <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
-    <li><a href="productos.html">Productos</a></li>
-    <li><a href="#contacto">¡Contactanos!</a></li>
-  </ul>
-</nav>
-   </div>
-  </div>
-</div>  
-</header>
-  
-<body onload=verCatalogo()>
-  <div class="cardConteiner">
-     <button onclick="verCarrito()" class="boton-personalizado">Ver mi carrito</button>
-  </div>
+  </head>
+
+  <header class="conteiner-fluid">
+    <div class="row-top">
+      <div class="col-md-12">
+        <img src="CSS/images/logomuffin.png" alt="" class="logo"></a>
+      </div>
+      <div>
+        <nav class="main-nav float-right d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="index.html">Inicio</a></li>
+            <li><a href="#sobreNosotros">Sobre Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="#contacto">¡Contactanos!</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    </div>
+  </header>
+
+  <body onload=verCatalogo()>
+    <div class="cardConteiner">
+      <button onclick="verCarrito()" class="boton-personalizado">Ver mi carrito</button>
+    </div>
 
 
-  <div id="Catalogo"></div>
+    <div id="Catalogo"></div>
 
-  <div id="Total"></div>
-  
-  <div id="iniciarCompra">
-    <button id="iniciarCompra" class="boton-personalizado">Iniciar Compra</button>
-  </div>
+    <div id="Total"></div>
 
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
+    <div>
+      <button id="iniciarCompra" class="boton-personalizado">Iniciar Compra</button>
+    </div>
 
-          <div class="col-lg-6 col-md-6 footer-info">
-            <h3>¡Contactanos!</h3>
-            <p>Hacenos la consulta que necesites. ¡Estamos a tu disposición! Tambien podes seguirnos en nuestras redes sociales.</p>
-          </div>
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
 
-          <div class="col-lg-6 col-md-6 footer-info">
-            <h4>Nuestras Redes</h4>
-            <p>
-              <strong>Teléfono:</strong> +54 1131290979<br>
-              <strong>Email:</strong> oli&cobakery@gmail.com<br>
-            </p>
+            <div class="col-lg-6 col-md-6 footer-info">
+              <h3>¡Contactanos!</h3>
+              <p>Hacenos la consulta que necesites. ¡Estamos a tu disposición! Tambien podes seguirnos en nuestras redes
+                sociales.</p>
+            </div>
 
-            <div class="social-links">
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+            <div class="col-lg-6 col-md-6 footer-info">
+              <h4>Nuestras Redes</h4>
+              <p>
+                <strong>Teléfono:</strong> +54 1131290979<br>
+                <strong>Email:</strong> oli&cobakery@gmail.com<br>
+              </p>
+
+              <div class="social-links">
+                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                <a href="#" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+              </div>
+
             </div>
 
           </div>
-
         </div>
       </div>
-    </div>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; 2020 Copyright <strong>Virginia Sanchez</strong>.
+      <div class="container">
+        <div class="copyright">
+          &copy; 2020 Copyright <strong>Virginia Sanchez</strong>.
+        </div>
       </div>
-    </div>
-  </footer>     
+    </footer>
 
-</body>
-<script src="script.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $("#iniciarCompra").click(function () {
+        alert("¿Deseas finalizar la compra?") //funcion para iniciar compra con MP
+      });
+    </script>
+
+
+  </body>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!--Ponemos JQUERY primero para que cargue antes del Script-->
+  <script src="script.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </html>

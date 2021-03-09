@@ -69,24 +69,20 @@ function sumarCarrito() {
   `;
 }
 
-$(document).ready(function(){
-  $("#sobreNosotros").fadeIn(1500)(function(){ 
+/* $(document).ready(function () {
+  $("#sobreNosotros").fadeIn(1500)(function () {
   });
-});
+}); */
 
 
-$(document).ready(function(){
-  $("#iniciarCompra").click(function(){
-    //alert("¿Deseas finalizar la compra?") funcion para iniciar compra con MP
-  }); 
-  });
+
 
 //https://api.mercadolibre.com/sites/MLA/search?category=MLA5726
-$.get(
+/* $.get(
   "https://codestats.net/api/users/jwildemer",
- function (baseDeDatos, estado) {
+  function (baseDeDatos, estado) {
     console.log(estado)
     console.log(baseDeDatos);
     //baseDedatos = valores;
   }
-);
+); */
