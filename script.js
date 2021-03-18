@@ -1,30 +1,31 @@
 async function verApi() {
   /* Obtenemos los datos de la API */
-  let resu = await fetch('data.json').then(response => response.json())
-    .then(function (baseDeDatos) {
-      Object.keys(baseDeDatos).forEach(function (i) {
-        document.getElementById("Catalogo").innerHTML += `
-          <div class="card" style="width: 18rem">
-          <img class="card-img-top" src = ${baseDeDatos[i]["img"]} alt = ${baseDeDatos[i]["titulo"]}>
-          <div class="card-body">
-            <h5>${baseDeDatos[i]["titulo"]}</h5>
-            <h4>$${baseDeDatos[i]["precio"]}</h4>
-            <button id="${i}" onclick="agregarAlCarrito(this.id)" class="boton-personalizado">Agregar al carrito</button>
-          </div>
-        </div>
-          `;
-      });
-      return baseDeDatos;
-    });
+  let resu = await fetch('data.json').then(response => response.json());
   return resu;
 }
 
-verApi()
+function mostrarProductos() {
+  verApi().then(function (baseDeDatos) {
+    Object.keys(baseDeDatos).forEach(function (i) {
+      document.getElementById("Catalogo").innerHTML += `
+        <div class="card" style="width: 18rem">
+        <img class="card-img-top" src = ${baseDeDatos[i]["img"]} alt = ${baseDeDatos[i]["titulo"]}>
+        <div class="card-body">
+          <h5>${baseDeDatos[i]["titulo"]}</h5>
+          <h4>$${baseDeDatos[i]["precio"]}</h4>
+          <button id="${i}" onclick="agregarAlCarrito(this.id)" class="boton-personalizado">Agregar al carrito</button>
+        </div>
+      </div>
+        `;
+    });
+  });
+}
+
 
 let carrito = [];
 
 function agregarAlCarrito(id) {
-  console.log(id)
+  console.log(id);
   verApi().then(function (valor) {
     carrito.push(valor[id]);
     console.log(carrito);

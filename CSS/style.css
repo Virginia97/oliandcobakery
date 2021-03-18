@@ -1,38 +1,52 @@
-body{
-  background: #eeeeee;
-  font-family: 'Nunito', sans-serif;
-  margin: 0;
-  padding: 0;
+:root {
+  /* Acá van tus colores */
+  --primary-color: white;
+  --secondary-color: #df9aaf;
+  --warning-color: #89dda4;
+  --light-bg: #6d1940;
+  --dark-bg: #7a1a78;
+  --darker-bg: #050504;
+  
+  --celeste: #2bc8b3;
+  --rosaoscuro: #c32987;
 }
 
-.logo{
+html, body {
+  background: var(--primary-color);
+  font-family: 'Nunito', sans-serif;
+  height: 100%;
+  margin: 0px;
+}
+
+.logo {
   width: 50px;
   display: inline-block;
 }
 
-header{
-  background: #df9aaf;
+header {
+  background: var(--secondary-color);
   padding-top: 5px;
   width: 100%;
-  position: fixed;
   top: 0%;
   display: grid;
   grid-template-columns: auto;
   z-index: 1000;
 } 
 
-nav{
+nav {
   text-align: right;
   margin-right: 10px;
   font-size: 20px;
 }
-nav a{
-  color: #ffffff;
+
+nav a {
+  color: var(--primary-color);
   font-size: 20px;
   font-weight: 700px;
   text-decoration: none;
   margin-right: 5px;
 }
+
 ul {
   position: absolute;
   top: 20px;
@@ -41,14 +55,17 @@ ul {
   font-size: 0;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0px 20px;
   font-size: 14px
 }
+
 ul li ul {
   display: none;
 }
+
 ul li:hover ul {
   z-index: 1;
   display:block;
@@ -56,8 +73,8 @@ ul li:hover ul {
   right: 300px;
 }    
 
-nav a:hover{
-  color:#6d1940;
+nav a:hover {
+  color:var(--light-bg);
 }
 
 .boton-personalizado {
@@ -75,55 +92,49 @@ nav a:hover{
   cursor: pointer;
 }
 
-p, h2, h4, h5 {
-color: black;
-}
-h1, h3{
-  color: #b102b1;
-  display: block;
-  position: absolute;
-  bottom: -16px;
-  text-align: center;
-  padding: 10px;
-  width: 100%;
+
+.bigTitle {
+  color: var(--primary-color);
+  font-size: 100px;
 }
 
-/*Inicio*/
-#inicio {
-  display: block;
-  position: relative;
-  width: 300px;
-}
-
-/*Sobre Nosotros*/
-#sobreNosotros{
-/*   display: flex; */
+#hero {
+  background-image: url("/CSS/images/muffinbackground.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+/* Sobre Nosotros */
+#sobreNosotros {
+  padding: 50px;
   text-align: center;
 }
 
-/*Nuestros Productos*/
-#productos{
-  text-align: left;
-  flex-direction: row;
+/* CUSTOM - SECTION
+Para usar en las nuevas sections*/
+.custom-section {
+  padding: 40px 20px 40px 20px;
 }
 
-#boxes{
-  text-align: right;
-  flex-direction: row;
+/* Centros */
+.center-text {
+  text-align: center;
 }
 
-#imgProductos{
-  float: right;
+.center-v {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-#imgBoxes{
-  float: left;
-}
 
-
-/*shop*/
+/* Shop */
 .card {
 margin: 10px auto;
 padding: 20px;
@@ -144,30 +155,34 @@ align-items: center;
   background: #CD7BAC;
   padding: 60px 0 30px 0;
 }
+
 #footer .footer-top .footer-info {
   margin-bottom: 30px;
 }
+
 #footer .footer-top .footer-info h3 {
   font-size: 34px;
   font-family: 'Josefin Sans', sans-serif;
   margin: 0 0 20px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
-  color: #6d1940;
+  color: var(--light-bg);
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
+
 #footer .footer-top .footer-info p {
   font-size: 13px;
   line-height: 24px;
   margin-bottom: 0;
   color: #ecf5ff;
 }
+
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background:#6d1940;
+  background:var(--light-bg);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -178,33 +193,40 @@ align-items: center;
   height: 36px;
   transition: 0.3s;
 }
+
 #footer .footer-top .social-links a:hover {
   background: #CD7BAC;
-  color: #fff;
+  color: var(--primary-color);
 }
+
 #footer .footer-top h4 {
   font-size: 14px;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
-  color: #6d1940;
+  color: var(--light-bg);
   text-transform: uppercase;
   position: relative;
   padding-bottom: 10px;
 }
+
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
 }
+
 #footer .footer-top .footer-contact p {
   line-height: 26px;
 }
+
 #footer .copyright {
   text-align: center;
   padding-top: 10px;
 }
 
-/*Nueva paleta
-celeste {color: #2bc8b3;}
-aguamarina {color: #89dda4;}
-magenta {color: #7a1a78;}
-rosa oscuro {color: #c32987;}
-rosa pastel {color: #df9aaf;}*
+/* ELEMENTOS */
+.test-row {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
