@@ -1,5 +1,5 @@
 async function verApi() {
-  /* Obtenemos los datos de la API */
+  /* Obtiene los datos de la API */
   let resu = await fetch('data.json').then(response => response.json());
   return resu;
 }
@@ -25,7 +25,6 @@ function mostrarProductos() {
 let carrito = [];
 
 function agregarAlCarrito(id) {
-  console.log(id);
   verApi().then(function (valor) {
     carrito.push(valor[id]);
     console.log(carrito);

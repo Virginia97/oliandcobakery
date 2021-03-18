@@ -1,12 +1,11 @@
 :root {
-  /* Acá van tus colores */
+  /* Colores */
   --primary-color: white;
   --secondary-color: #df9aaf;
   --warning-color: #89dda4;
   --light-bg: #6d1940;
   --dark-bg: #7a1a78;
   --darker-bg: #050504;
-  
   --celeste: #2bc8b3;
   --rosaoscuro: #c32987;
 }
@@ -71,7 +70,7 @@ ul li:hover ul {
   display:block;
   padding-top: 30px;
   right: 300px;
-}    
+}
 
 nav a:hover {
   color:var(--light-bg);
@@ -82,13 +81,13 @@ nav a:hover {
   color: black;
   padding: 15px;
   background-color: rgb(248, 110, 248);  
-  transition: background-color 0.5s;
+  transition: al 0.5s;
   border-radius: 25px;
 }
 
 .boton-personalizado:hover {
   background-color: white;
-  transition: background-color 0.5s;
+  transition: all 0.5s;
   cursor: pointer;
 }
 
@@ -99,7 +98,7 @@ nav a:hover {
 }
 
 #hero {
-  background-image: url("/CSS/images/muffinbackground.png");
+  background-image: url("../CSS/images/muffinbackground.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
