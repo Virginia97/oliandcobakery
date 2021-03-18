@@ -60,7 +60,6 @@ nav a:hover{
   color:#6d1940;
 }
 
-
 .boton-personalizado {
   font-size: 15px;
   color: black;
@@ -79,20 +78,21 @@ nav a:hover{
 p, h2, h4, h5 {
 color: black;
 }
+h1, h3{
+  color: #b102b1;
+  display: block;
+  position: absolute;
+  bottom: -16px;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
 
 /*Inicio*/
 #inicio {
-  padding-bottom: 60px;  
-/*   position: relative; */
-/*   display: inline-block; */
-}
-h1{
-/*   position: absolute; al div que contenga el h1 y h3 */
-  text-align: center;
-}
-h3{
-/*   position: absolute; */
-  text-align: center;
+  display: block;
+  position: relative;
+  width: 300px;
 }
 
 /*Sobre Nosotros*/
@@ -105,9 +105,21 @@ h3{
 
 /*Nuestros Productos*/
 #productos{
-/*   display: flex; */
   text-align: left;
+  flex-direction: row;
+}
 
+#boxes{
+  text-align: right;
+  flex-direction: row;
+}
+
+#imgProductos{
+  float: right;
+}
+
+#imgBoxes{
+  float: left;
 }
 
 
@@ -117,7 +129,7 @@ margin: 10px auto;
 padding: 20px;
 background-color: rgb(225, 179, 240);
 border: 1px solid #b102b1;
-justify-content: center;
+justify-content: space-around;
 }
 
 .cardConteiner {

@@ -1,6 +1,30 @@
-[
-    "{ id:1, name:Cupcake Chocolate, price:70 }",
-    "{ id:2, name:Mini Cake, price:550 }",
-    "{ id:3, name:Snack Box, price:800 }",
-    "{ id:4, name:Cookies, price:300 }"
-]
+{
+    "id1": {
+        "titulo": "Cupcake Chocolate",
+        "precio": 70,
+        "descripcion": "Cupcake de chocolate con frosting de chocolate y relleno mermelada de frutos rojos.",
+        "stock": 30,
+        "img": "CSS/images/chocolate.jpg"
+    },
+    "id2": {
+        "titulo": "Mini Cake",
+        "precio": 550,
+        "descripcion": "Torta pequeña con frutas de estación.",
+        "stock": 20,
+        "img": "CSS/images/mini-cake.jpg"
+    },
+    "id3": {
+        "titulo": "Snack Box",
+        "precio": 800,
+        "descripcion": "Contiene variedad de Snacks, picada y dos cervezas. ¡Ideal para compartir!",
+        "stock": 5,
+        "img": "CSS/images/picada2.png"
+    },
+    "id4": {
+        "titulo": "Cookies",
+        "precio": 300,
+        "descripcion": "Galletitas de vainilla con diseños personalizados.",
+        "stock": 15,
+        "img": "CSS/images/cookies.jpg"
+    }
+}
