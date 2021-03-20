@@ -8,7 +8,7 @@ function mostrarProductos() {
   verApi().then(function (baseDeDatos) {
     Object.keys(baseDeDatos).forEach(function (i) {
       document.getElementById("Catalogo").innerHTML += `
-        <div class="card" style="width: 18rem">
+        <div id="miProducto" class="card" style="width: 18rem">
         <img class="card-img-top" src = ${baseDeDatos[i]["img"]} alt = ${baseDeDatos[i]["titulo"]}>
         <div class="card-body">
           <h5>${baseDeDatos[i]["titulo"]}</h5>
@@ -61,6 +61,7 @@ function obtenerPrecioTotal() {
 
 
 $(document).ready(function () {
-  $("#sobreNosotros").fadeIn(1500)(function () {
-  });
+  $("#sobreNosotros").fadeIn(3000);
+  console.log("Se cargó el script");
 });
+
