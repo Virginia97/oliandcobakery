@@ -91,6 +91,15 @@ nav a:hover {
   cursor: pointer;
 }
 
+.buttonEliminarProducto{
+  font-size: 15px;
+  color: black;
+  padding: 15px;
+  background-color: rgb(248, 110, 248);  
+  transition: al 0.5s;
+  border-radius: 25px;
+}
+
 
 .bigTitle {
   color: var(--primary-color);
@@ -113,6 +122,7 @@ nav a:hover {
 #sobreNosotros {
   padding: 50px;
   text-align: center;
+  display: none;
 }
 
 /* CUSTOM - SECTION
@@ -132,12 +142,38 @@ Para usar en las nuevas sections*/
   flex-direction: column;
 }
 
+.btn {
+  margin: 20px auto;
+  border: none;
+  padding: 10px 30px;
+  font-size: 20px;
+  position: relative;
+}
+.btn::before {
+  -webkit-transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: #CD7BAC;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.btn .btn-text {
+  color: #6d1940;
+  mix-blend-mode: difference;
+}
+.btn:hover::before {
+  background: pink;
+  width: 100%;
+}
 
 /* Shop */
 .card {
 margin: 10px auto;
 padding: 20px;
-background-color: rgb(225, 179, 240);
+background-color: pink;
 border: 1px solid #b102b1;
 justify-content: space-around;
 }
