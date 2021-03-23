@@ -12,7 +12,7 @@
 
 html, body {
   background: var(--primary-color);
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', 'Lexend' sans-serif;
   height: 100%;
   margin: 0px;
 }
@@ -104,6 +104,7 @@ nav a:hover {
 .bigTitle {
   color: var(--primary-color);
   font-size: 100px;
+  font-family: 'Lexend', sans-serif;
 }
 
 #hero {

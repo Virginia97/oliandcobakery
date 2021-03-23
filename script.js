@@ -28,7 +28,6 @@ let carrito = [];
 function agregarAlCarrito(id) {
   verApi().then(function (valor) {
     carrito.push(valor[id]);
-    console.log(carrito);
     saveLocalStorage(carrito, "micarrito");
   })
 }
@@ -59,14 +58,14 @@ function saveLocalStorage(info, tag) {
 
 function loadLocalStorage(tag) {
   if (storage.getItem(tag) != null) {
-    carrito = Array.from(JSON.parse(storage.getItem(tag)))
+    carrito = Array.from(JSON.parse(storage.getItem(tag)));
   }
 }
 
 function eliminarProducto(indice) {
   carrito.splice(indice, 1);
-  console.log("Eliminado del carrito", carrito);
-  verCarrito()
+  saveLocalStorage(carrito, "micarrito");
+  verCarrito();
 }
 
 function vaciarCarrito() {
